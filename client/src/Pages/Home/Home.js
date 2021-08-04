@@ -1,23 +1,24 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import Test from "../../Components/Test/Test";
+import PageLayout from "../../Components/PageLayout/PageLayout";
 
-function Home (props) {
+function Home() {
 
     return (
-        <>
-            <Test />
+        <PageLayout>
+            <Test/>
 
             <Link to="/">
                 Home
             </Link>
 
-            <br />
+            <br/>
 
             <Link to="/error">
                 Error
             </Link>
-        </>
+        </PageLayout>
     );
 
 }

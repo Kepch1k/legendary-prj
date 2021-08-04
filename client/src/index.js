@@ -1,9 +1,11 @@
 import App from "./Components/App/App";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./styles/normalize.css";
+import "./styles/index.css";
+import "./styles/index.scss";
 
 ReactDOM.render(
-    <App />,
+    <App/>,
     document.querySelector("#root")
 );

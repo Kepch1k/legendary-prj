@@ -20,44 +20,39 @@ axios.interceptors.response.use(
     async (error) => {
 
         try {
-
-            switch (error.response.status) {
-
-            case 401:
-                localStorage.clear();
-                sessionStorage.clear();
-                break;
-            case 403:
-                const token = sessionStorage.getItem(TOKENS_KEY)
-                    ? sessionStorage.getItem(TOKENS_KEY)
-                    : localStorage.getItem(TOKENS_KEY);
-                const {"data": {"tokenPair": tokens}} = await axios.post(
-                    `${restURL}/refresh`,
-                    {"refresh": JSON.parse(token).refresh}
-                );
-                const TOKENS_JSON = JSON.stringify(tokens);
-                if (sessionStorage.getItem(TOKENS_KEY)) {
-
-                    sessionStorage.setItem(
-                        TOKENS_KEY,
-                        TOKENS_JSON
-                    );
-                    error.config.headers.Authorization = `Bearer ${JSON.parse(sessionStorage.getItem(TOKENS_KEY)).access}`;
-
-                } else {
-
-                    localStorage.setItem(
-                        TOKENS_KEY,
-                        TOKENS_JSON
-                    );
-                    error.config.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem(TOKENS_KEY)).access}`;
-
-                }
-                return axios.request(error.config);
-            default:
-                break;
-
-            }
+            //
+            // switch (error.response.status) {
+            //
+            //     case 401:
+            //         localStorage.clear();
+            //         sessionStorage.clear();
+            //         break;
+            // case 403:
+            // const {"data": {"tokenPair": tokens}} = await axios.post(
+            //     `${restURL}/refresh`,
+            //     {"refresh": JSON.parse(token).refresh}
+            // );
+            // const TOKENS_JSON = JSON.stringify(tokens);
+            // if (sessionStorage.getItem(TOKENS_KEY)) {
+            //
+            //     sessionStorage.setItem(
+            //         TOKENS_KEY,
+            //         TOKENS_JSON
+            //     );
+            //     error.config.headers.Authorization = `Bearer ${JSON.parse(sessionStorage.getItem(TOKENS_KEY)).access}`;
+            //
+            // } else {
+            //
+            //     localStorage.setItem(
+            //         TOKENS_KEY,
+            //         TOKENS_JSON
+            //     );
+            //     error.config.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem(TOKENS_KEY)).access}`;
+            //
+            // }
+            // return axios.request(error.config);
+            //     default:
+            // }
 
         } catch (err) {
         }

@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon --exec babel-node src/index.js",
+    "watch_dev": "nodemon --exec babel-node src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
@@ -24,6 +24,8 @@
     "@babel/node": "^7.14.9",
     "@babel/preset-env": "^7.14.9",
     "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
     "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0"
   }
