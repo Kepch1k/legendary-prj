@@ -1,9 +1,10 @@
 import React from "react";
+import styles from './Content.module.scss';
 
 function Content(props) {
 
     return (
-        <main>
+        <main className={styles.main}>
             {props.children}
         </main>
     );
