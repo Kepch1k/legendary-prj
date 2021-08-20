@@ -10,7 +10,7 @@ function Home() {
             targets: 'div',
             // translateX: 250,
             rotate: '55turn',
-            backgroundColor: '#FFF',
+            // backgroundColor: '#FFF',
             duration: 800
         });
     })
