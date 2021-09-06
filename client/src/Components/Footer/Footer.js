@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 function Footer() {
 
     const [state, setState] = useState({
-        'companyName': 'Test',
+        'companyName': process.env.APP_NAME,
         'startDate': 2021,
         'endDate': +(new Date()).getFullYear(),
         'getDate': function () {
@@ -13,7 +13,7 @@ function Footer() {
     });
 
     return (
-        <footer className={styles.footer}>
+        <footer className={`${styles.footer} ${styles.footer__company}`}>
             <div className={styles.footer__company}>©{state.companyName} {state.getDate()}</div>
             <div>second</div>
         </footer>

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import axios from "../../config/axiosConfig";
 
-function Test (props) {
+function Test(props) {
 
     useEffect(() => {
 
@@ -13,9 +13,7 @@ function Test (props) {
 
     });
 
-    return (<h1>
-Привет
-</h1>);
+    return (<></>);
 
 }
 
