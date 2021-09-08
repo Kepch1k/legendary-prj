@@ -1,12 +1,12 @@
 {
-  "name": "server",
+  "name": "test-server",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch_dev": "nodemon --exec babel-node src/index.js",
-    "start": "node src/index.js"
+    "server_watch": "nodemon --exec babel-node src/index.js",
+    "server_serve": "babel-node src/index.js"
   },
   "keywords": [],
   "author": "",

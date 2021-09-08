@@ -4,13 +4,13 @@ module.exports = {
             name: "client",
             cwd: "./client",
             script: "npm",
-            args: "run watch_dev"
+            args: "run client_watch_prod"
         },
         {
             name: "server",
             cwd: "./server",
             script: "npm",
-            args: "run watch_dev"
+            args: "run server_watch"
         }
     ]
 }

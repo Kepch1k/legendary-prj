@@ -122,12 +122,6 @@ module.exports = function (env, {mode}) {
                     ]
                 }),
                 new ESLintPlugin(),
-                // ...(inDev ? [] : [
-                //     new miniCss({
-                //         filename: '[name].css', // : '[name].[hash].css'
-                //         chunkFilename: '[id].css' // : '[id].[hash].css'
-                //     })
-                // ]),
                 new miniCss({
                     filename: '[name].css', // : '[name].[hash].css'
                     chunkFilename: '[id].css' // : '[id].[hash].css'
@@ -136,14 +130,5 @@ module.exports = function (env, {mode}) {
             ],
         "stats":
             "minimal",
-        "watch":
-            true,
-        "watchOptions":
-            {
-                "aggregateTimeout":
-                    300,
-                "poll":
-                    500
-            }
     }
 };

@@ -22,9 +22,6 @@ i18n
         interpolation: {
             escapeValue: false,
             formatSeparator: ','
-        },
-        react: {
-            wait: true
         }
     })
 
