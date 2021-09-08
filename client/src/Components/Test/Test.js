@@ -13,7 +13,7 @@ function Test(props) {
 
     });
 
-    return (<></>);
+    return null;
 
 }
 

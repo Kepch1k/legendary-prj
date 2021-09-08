@@ -1,4 +1,6 @@
 {
   "hello.label": "Hello",
-  "thankyou.label": "Thank you"
+  "thankyou.label": "Thank you",
+  "theme.light": "Light",
+  "theme.dark": "Dark"
 }

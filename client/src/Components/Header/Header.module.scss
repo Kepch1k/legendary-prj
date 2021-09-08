@@ -1,4 +1,15 @@
+@import "src/styles/variables";
+
 .header {
-  background: red;
   min-height: 10vh;
+}
+
+.header__light {
+  background: $white;
+  color: $black;
+}
+
+.header__dark {
+  background: $black;
+  color: $white;
 }

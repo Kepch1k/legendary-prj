@@ -1,4 +1,6 @@
 {
   "hello.label": "Привет",
-  "thankyou.label": "Спасибо"
+  "thankyou.label": "Спасибо",
+  "theme.light": "Светлая",
+  "theme.dark": "Тёмная"
 }
