@@ -1,8 +1,3 @@
-import express from 'express';
-import TestController from '../Controllers/testController';
+const RouterV1 = require('./V1/index');
 
-const router = express.Router();
-
-router.get('/test', TestController.getData);
-
-module.exports = router;
+module.exports = {"V1": RouterV1};

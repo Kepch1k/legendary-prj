@@ -1,8 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
-import router from './Router/index';
+import {V1 as routerV1} from './Router';
 import sequelize from './Database/sequelize';
+import {V1 as V1Documentation} from './ApiDocumentatinon';
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerOptions = {
+    explorer: true
+};
 
 process.env = {
     ...process.env,
@@ -12,7 +18,7 @@ process.env = {
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-var options = {
+var staticOptions = {
     dotfiles: 'ignore',
     etag: false,
     extensions: ['htm', 'html'],
@@ -24,9 +30,16 @@ var options = {
     }
 };
 
-app.use(express.static('public', options));
+app.use(express.static('public', staticOptions));
 
-app.use('/api', router);
+// V1 routing
+app.use('/api/v1', routerV1);
+routerV1.use('/docs', swaggerUi.serve);
+routerV1.get('/docs', swaggerUi.setup(V1Documentation, swaggerOptions));
+// Redirect to page not found
+routerV1.get('*', (req, res) => {
+    res.redirect('/404');
+});
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../public/index.html'));

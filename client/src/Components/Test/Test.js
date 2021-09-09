@@ -5,7 +5,7 @@ function Test(props) {
 
     useEffect(() => {
 
-        axios.get("/api/test").then((data) => {
+        axios.get("/api/v1/test").then((data) => {
 
             console.log(data);
 
