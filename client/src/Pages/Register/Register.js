@@ -16,19 +16,19 @@ function Register(props) {
 
                 <form onSubmit={handleFormSubmit}>
                     <div>
-                        <label htmlFor='email'>Email</label>
+                        <label htmlFor="email">Email</label>
                         <input
-                            type='email'
-                            id='email'
-                            placeholder='Your Email'
+                            type="email"
+                            id="email"
+                            placeholder="Your Email"
                         />
                     </div>
                     <div>
-                        <label htmlFor='password'>Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
-                            type='password'
-                            id='password'
-                            placeholder='Your Password'
+                            type="password"
+                            id="password"
+                            placeholder="Your Password"
                         />
                     </div>
 

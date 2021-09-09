@@ -1,6 +1,6 @@
 module.exports.getData = async (req, res, next) => {
     res.send({
-        items : [
+        items: [
             'cat1',
             'cat2',
             'cat3',

@@ -17,5 +17,5 @@ ReactDOM.render(
         </Suspense>
     </Provider>,
     document.querySelector("#root")
-)
+);
 

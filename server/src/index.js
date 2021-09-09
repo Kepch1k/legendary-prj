@@ -26,7 +26,7 @@ var staticOptions = {
     // maxAge: '1d',
     redirect: false,
     setHeaders: function (res, path, stat) {
-        res.set('x-timestamp', Date.now())
+        res.set('x-timestamp', Date.now());
     }
 };
 
@@ -43,11 +43,11 @@ routerV1.get('*', (req, res) => {
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../public/index.html'));
-})
+});
 
 // синхронизация с бд, после успшной синхронизации запускаем сервер
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
-        console.log(`Example app listening at http://localhost:${PORT}`)
-    })
+        console.log(`Example app listening at http://localhost:${PORT}`);
+    });
 }).catch(err => console.log(err));

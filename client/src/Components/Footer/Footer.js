@@ -8,7 +8,7 @@ function Footer() {
         'startDate': 2021,
         'endDate': +(new Date()).getFullYear(),
         'getDate': function () {
-            return this.endDate !== this.startDate ? `${this.startDate} - ${this.endDate}` : this.startDate
+            return this.endDate !== this.startDate ? `${this.startDate} - ${this.endDate}` : this.startDate;
         },
     });
 

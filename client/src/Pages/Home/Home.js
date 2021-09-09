@@ -18,7 +18,7 @@ function Home() {
             rotate: '5turn',
             duration: 800
         });
-    })
+    });
 
     return (
         <PageLayout>

@@ -10,7 +10,7 @@ function Header() {
     useEffect(() => {
         const themeClassName = `header__${currentTheme}`;
         setHeaderClassName(`${styles.header} ${styles[themeClassName]}`);
-    }, [currentTheme])
+    }, [currentTheme]);
 
     return (
         <header className={headerClassName}>
